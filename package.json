@@ -13,6 +13,7 @@
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
     "@types/styled-components": "^5.1.25",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -23,7 +24,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --no-cache --runInBand --env=jsdom",
+    "test:watch": "npm test -- --watch",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "verifycommit": "commitlint --to HEAD --verbose"
@@ -61,6 +65,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.29.4",
     "husky": "^4.3.8",
-    "lint-staged": "^12.4.1"
+    "lint-staged": "^12.4.1",
+    "ts-jest": "^28.0.1"
   }
 }
