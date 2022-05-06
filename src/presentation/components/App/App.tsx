@@ -6,7 +6,7 @@ function App() {
     <React.Fragment>
       <GlobalStyle/>
       <div className="App">
-        text
+        textada
       </div>
     </React.Fragment>
   );
